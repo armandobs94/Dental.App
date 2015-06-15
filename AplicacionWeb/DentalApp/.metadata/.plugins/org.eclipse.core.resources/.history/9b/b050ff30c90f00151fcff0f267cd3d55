@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Dental.App</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="Usuario">Usuario:</string>
+    <string name="Contra">Contraseña:</string>
+    <string name="Entrar">Entrar</string>
+    <string name="campoNombre">Nombre:</string>
+    <string name="campoAsunto">Asunto:</string>
+
+</resources>

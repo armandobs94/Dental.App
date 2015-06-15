@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Dental.App</string>
+    <string name="action_settings">Configuración</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="Usuario">Usuario:</string>
+    <string name="Contra">Contraseña:</string>
+    <string name="Entrar">Entrar</string>
+    <string name="campoNombre">Nombre:</string>
+    <string name="campoAsunto">Asunto:</string>
+    <string name="campoComentario">Ingresa tu comentario aquí:</string>
+    <string name="campo_cita">Tu cita es:</string>
+    <string name="campoHorario">Horario:</string>
+    <string name="botonEnviar">Enviar</string>
+    <string name="titleContacto">Contacto</string>
+
+</resources>

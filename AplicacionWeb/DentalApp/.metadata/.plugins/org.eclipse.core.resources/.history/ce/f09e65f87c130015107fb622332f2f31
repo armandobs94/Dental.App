@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#DBD6D6">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/edit_nombre_c"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="@string/campoNombre" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_asunto_c"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="@string/campoAsunto" />
+
+            <EditText
+                android:id="@+id/edit_comentario_c"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:ems="10"
+                android:hint="@string/campoComentario"
+                android:inputType="textMultiLine"
+                android:paddingTop="80dp"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/btn_enviar_c"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="80dp"
+                android:text="@string/botonEnviar" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

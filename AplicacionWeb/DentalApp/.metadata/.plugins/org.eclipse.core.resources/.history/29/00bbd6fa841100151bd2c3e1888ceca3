@@ -1,0 +1,29 @@
+package utem.integradora.dental.app;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.Toast;
+
+public class VistaCitas extends Activity{
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.citas_main);
+	}
+	
+	@Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+        case R.id.Contacto:
+            Toast.makeText(this, "Programador: Diego (23/08/2011)",
+                    Toast.LENGTH_SHORT).show();
+            break;
+        case R.id.Pagar:
+            finish();
+        }
+        return true;
+    }
+
+}
