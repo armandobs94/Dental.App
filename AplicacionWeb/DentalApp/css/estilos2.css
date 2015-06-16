@@ -1,0 +1,98 @@
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+*{
+border: 0;
+margin: 0;
+padding: 0;
+}
+
+article,figcaption,figure,footer,header,hgroup,nav,section{
+	display: block;
+}
+
+/* 16 px = 12pt = 100% = 1em es el ancho de la letra M */
+body{
+	background: #E6E6E6 ; 
+	background-repeat: no-repeat;
+	background-position: right;
+	font-size: 1em; 
+} 		
+
+img{
+	max-width: 100%;
+}
+
+header,section#contenedor, footer{
+
+margin: 0 auto;
+max-width: 95%;
+text-align: center;
+border-radius: 0.5em;
+
+}
+
+/*Para el navegador*/
+ { margin: 0; padding: 0; float: left;  }
+ li { list-style: none; background: #fff; width: 100%; border-bottom: 1px solid #666;text-align: center; }
+ li a { display: block; padding: 8px; border-left: 4px solid #444; text-decoration: none; box-shadow: 2px 2px 5px #ccc; color: #555; }
+ li a:hover { border-left: 4px solid #069; background: #f8f8f8; }
+ li ul { display: none; }
+ li:hover ul { display: block; }
+ li:hover ul li { background: #333; }
+ li:hover ul li a { color: #ccc; }
+ li:hover ul li a:hover { background: #222; border-left: 4px solid #900; }
+
+section#principal,aside,ul#nav{
+background: white;
+border-radius: 0.5em;
+display: inline-block;  /*los alinie en el mismo bloque*/
+margin: 0 auto;
+max-width: 100%;
+padding: 0.25em;
+vertical-align: top;
+width: 20%;
+text-align: left;
+
+/*opacity: 0.5;*/
+
+}
+
+aside{
+	background: white;
+width:75%;
+}
+
+
+footer{
+	color: black;
+	font-size: 0.85em;
+	padding: 0.75em 0;
+	padding-top: 20em;
+
+}
+
+.fade{
+	-ms-transition: all 0.5s ease-in;
+-mos-transition: all 0.5s ease-in;
+-o-transition: all 0.5s ease-in;
+-webkit-transition: all 0.5s ease-in;
+transition: all 0.5s ease-in;
+opacity:1;
+filter:alpha(opacity=10);   /*para que el explorer lo lea bien*/ 
+}
+
+.fade:hover{
+	-ms-transition: all 0.5s ease-out;
+-mos-transition: all 0.5s ease-out;
+-o-transition: all 0.5s ease-out;
+-webkit-transition: all 0.5s ease-out;
+transition: all 0.5s ease-out;
+opacity:.5;
+filter:alpha(opacity=5);   /*para que el explorer lo lea bien*/ 
+}
+
+ /*menu de navegacion*/

@@ -1,0 +1,21 @@
+@media(max-width:900px){
+
+
+section#principal,aside{
+background: white;
+border-radius: 0.5em;
+display: inline-block;
+margin: 0 auto;
+max-width: 100%;
+padding: 0.5em;
+vertical-align: top;
+width: 95%;
+}
+
+aside{
+	padding: 0.5em;
+	margin-top: 0.3em;
+}
+
+
+}

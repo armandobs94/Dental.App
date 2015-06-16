@@ -1,0 +1,52 @@
+@media(min-width:901px) and (max-width:1080px) {
+	header h1{
+		text-align: right;
+		width: 35%;
+	}
+
+nav,div{
+	text-align: right;
+	width: 60%;
+	float: right;
+
+	
+}
+nav li{
+	font-size: .90em;
+
+}
+
+.mostrar{
+	visibility: none;
+}
+
+.ocultar{
+	display: none;
+}
+
+
+#btn{
+	float: right;
+	margin-left: 2px;
+	/*border-color: blue;
+	background-color: white;*/
+	background:-moz-linear-gradient(#fff 0%,#fff 100%); 
+	background:-ms-linear-gradient(#fff 0%,#fff 100%);
+	background:-o-linear-gradient(#fff 0%,#fff 100%); 
+	background:-webkit-linear-gradient(#fff 0%,#fff 100%);
+	background:linear-gradient(#fff 0%,#fff 100%);
+	border:solid 1px #2E2EFE; 
+	border-radius:5px;
+	text-align:center;
+	padding:5px; 
+	color:#190707;
+	width:75px;
+	}
+
+#btn:hover{
+	background:-moz-linear-gradient(#190707 0%,#fff 100%);
+	color:#999; 
+}
+}
+
+
