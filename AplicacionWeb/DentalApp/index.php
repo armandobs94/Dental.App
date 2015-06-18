@@ -65,6 +65,6 @@
 	<a href="index.html" class="ocultar">
 		<img class="fade" alt="DentalApp" src="img/logo.png">
 	</a>
-	<footer>Dentalapp</footer>
+	<footer>Dental.App</footer>
 </body>
 </html>
