@@ -7,23 +7,23 @@ var e = document.getElementById('g_t');
 
 //Carga el formulario de citas por periodo
 a.onclick = function(){
-	menuChange("c_per.html");
+	menuChange("citas_periodo.html");
 }
 
 b.onclick = function(){
-	menuChange("c_oca.html");
+	menuChange("citas_ocacionales.html");
 }
 
 c.onclick = function(){
-	menuChange("r_gnl.html");
+	menuChange("reporte_general.html");
 }
 
 d.onclick = function(){
-	menuChange("r_per.html");
+	menuChange("reporte_periodo.html");
 }
 
 e.onclick = function(){
-	menuChange("r_cli.html");
+	menuChange("reporte_cliente.html");
 }
 
 function menuChange(opc){

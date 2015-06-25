@@ -11,7 +11,8 @@ class resivir_post {
     }
 // Funcion del login 
     function login() {
-		$cont = mysqli_connect("localhost","root","","dentalapp") or die("Error de servidor");
+
+		include("conexion.php");
 		$query = mysqli_query($cont,"SELECT * FROM administradores WHERE user = '$this->user' AND password = '$this->password'");
 		if(mysqli_num_rows($query) == 1){
 			$row = mysqli_fetch_array($query);
@@ -20,7 +21,11 @@ class resivir_post {
 				header('Location:../bienvenido.php');
 				exit;
 		}else{
-			header('Location:../index.php');
+			echo "<script>
+						alert('Usuario y Contraseña incorrectos.');
+				  		window.location='../index.php';
+				  </script>";
+			// header('Location:../index.php');
 			exit;
 		}
     }

@@ -3,7 +3,7 @@
 	<head>
 		<title>Dentilapp</title>
 		<meta charset="utf-8"/> <!-- Universal -->
-		<meta description="Web principal donde los clientes podran ver la información del consultorio"/> <!--Descripcion de la pagina apra que slaga en el navegador  -->
+		<meta description="Pagina principal del dentista"/> <!--Descripcion de la pagina apra que slaga en el navegador  -->
 	
 		<link rel="stylesheet" type="text/css" href="css/estilos.css">
 		<link rel="stylesheet" type="text/css" href="css/escritorio.css">
@@ -23,48 +23,43 @@
 <body>
 	<form action="php/login.php" method="POST">
 		<button id="btn">Log in</button>
-		<input type="password" name="password" placeholder="Contraseña:"   id="comentario">
-		<input type="text" name="user" placeholder="Usuario:"id="comentario">	
+		<input type="password" name="password" placeholder="Contraseña:"   id="comentario" required>
+		<input type="text" name="user" placeholder="Usuario:"id="comentario" required>	
 	</form>
 	
 <header>
-	<div>	
-		<nav>
-			<ul>
-				<!-- <li><a>Login</a></li> -->
-				<li class="ocultar"><a>Información</a></li>
-			</ul>
-		</nav>
-	</div>
+	
 	<h1>
-		<a href="index.html" class="mostrar">
+		<a href="index.php" >
 			<img class="fade"  class="mostrar" alt="DentalApp" src="img/logo.png">
 		</a>
 	</h1>
 	</header>
-	<section id="contenedor">  <!--Esta  es la  seccion es invisible-->
-	<section id="principal">
+	<section id="contenedor">  
 	<article id="galeria-inicio">
 		<div class="flexslider">
 			<ul class="slides">
 				<li>
-					<a href="index.php"><img src="img/uno.jpg"</a>
-					<p class="flex-caption">Demo</p>
+					<a href="index.php"><img src="img/dentall.png"</a>
+					<p class="flex-caption">DentalApp</p>
 				</li>	
 
 				<li>
-					<a href="index.php"><img src="img/uno.jpg"</a>
-					<p class="flex-caption">Demo</p>
+					<a href="index.php"><img src="img/dentall2.png"</a>
+					<p class="flex-caption">DentalApp</p>
 				</li>
+
+<li>
+					<a href="index.php"><img src="img/dentall3.png"</a>
+					<p class="flex-caption">DentalApp</p>
+				</li>
+
 			</ul>
 		</div>
 
 	</article>
 	</section>
-	</section>
-	<a href="index.html" class="ocultar">
-		<img class="fade" alt="DentalApp" src="img/logo.png">
-	</a>
-	<footer>Dental.App</footer>
+	
+	
 </body>
 </html>

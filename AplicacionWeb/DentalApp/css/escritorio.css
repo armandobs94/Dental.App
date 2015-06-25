@@ -15,18 +15,14 @@ nav li{
 
 }
 
-.ocultar{
-	display: none;
-}
-
 .mostrar{
 	visibility: none;
 }
 #btn{
 	float: right;
 	margin-left: 2px;
-	/*border-color: blue;
-	background-color: white;*/
+	border-color: blue;
+	background-color: white;
 	background:-moz-linear-gradient(#fff 0%,#fff 100%); 
 	background:-ms-linear-gradient(#fff 0%,#fff 100%);
 	background:-o-linear-gradient(#fff 0%,#fff 100%); 

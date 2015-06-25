@@ -3,7 +3,7 @@
 	if (empty($_SESSION['user'])) {
 		header('Location:index.php');
 	}else{
-		echo $_SESSION['user'];
+		$_SESSION['user'];
 	}
 ?>
 <!DOCTYPE html>
@@ -19,7 +19,10 @@
 	</head>
 <body>
 	<!-- Se muestra el nombre de usuario y link para salir -->
-	<a href="php/logout.php"> Log out </a>
+	<div id="logout">
+		<a><?php echo $_SESSION['user']; ?></a>
+		<a href="php/logout.php"> Log out </a>
+	</div>
 	<a href="bienvenido.php">
 		<img class="fade"   alt="DentalApp" src="img/logo.png"/>
 	</a>

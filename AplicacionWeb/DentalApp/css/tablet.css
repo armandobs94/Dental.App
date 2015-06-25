@@ -4,32 +4,26 @@
 		width: 35%;
 	}
 
-nav,div{
+div{
 	text-align: right;
 	width: 60%;
 	float: right;
 
-	
-}
-nav li{
-	font-size: .90em;
-
 }
 
-.mostrar{
-	visibility: none;
-}
 
-.ocultar{
-	display: none;
+section#contenedor{
+margin: 0 auto;
+max-width: 75%;
+text-align: center;
 }
 
 
 #btn{
 	float: right;
 	margin-left: 2px;
-	/*border-color: blue;
-	background-color: white;*/
+	border-color: blue;
+	background-color: white;
 	background:-moz-linear-gradient(#fff 0%,#fff 100%); 
 	background:-ms-linear-gradient(#fff 0%,#fff 100%);
 	background:-o-linear-gradient(#fff 0%,#fff 100%); 

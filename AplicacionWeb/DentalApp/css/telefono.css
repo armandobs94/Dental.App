@@ -1,37 +1,17 @@
 @media(max-width:900px){
-nav li,ul{
-	display: inline-block;
-	margin: 0px;
-	width: 100%;
-	padding: 0.7em;
-	font-size: 1.2em;
-
-}
-
-section#principal{
-margin-bottom: 0.1em;
-font-size: 0.6em;
-width: 200%;	
-
+section#contenedor{
+margin: 0 auto;
+max-width: 75%;
+text-align: center;
 }
 
 
-article#galeria-inicio{
-	width: 	100%;
-}
 
-input,div{
-	width:95%;
-}
-
-.mostrar{
-	display: none;
-}
-#btn{
-	float: right;
+#btn{	
+	display: 	none;
 	margin-left: 2px;
-	/*border-color: blue;
-	background-color: white;*/
+	border-color: blue;
+	background-color: white;
 	background:-moz-linear-gradient(#fff 0%,#fff 100%); 
 	background:-ms-linear-gradient(#fff 0%,#fff 100%);
 	background:-o-linear-gradient(#fff 0%,#fff 100%); 
@@ -46,8 +26,8 @@ input,div{
 	}
 
 #btn:hover{
+
 	background:-moz-linear-gradient(#190707 0%,#fff 100%);
 	color:#999; 
 }
 
-}
