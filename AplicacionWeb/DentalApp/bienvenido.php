@@ -12,7 +12,7 @@
 	<title>Dental.App</title>
 		<meta charset="utf-8"/> <!-- Universal -->
 		<meta description="Web "/> <!--Descripcion de la pagina apra que salga en el navegador  -->
-		<link rel="stylesheet" type="text/css" href="css/estilos2.css">
+		<!-- <link rel="stylesheet" type="text/css" href="css/estilos2.css"> -->
 		<link rel="stylesheet" type="text/css" href="css/escritorio2.css">
 		<link rel="stylesheet" type="text/css" href="css/telefono2.css">
 		<link rel="stylesheet" type="text/css" href="css/tablet2.css">
@@ -20,7 +20,7 @@
 <body>
 	<!-- Se muestra el nombre de usuario y link para salir -->
 	<div id="logout">
-		<a><?php echo $_SESSION['user']; ?></a>
+		<a id="user">Bienvenido: <?php echo $_SESSION['user']; ?></a>
 		<a href="php/logout.php"> Log out </a>
 	</div>
 	<a href="bienvenido.php">
@@ -48,14 +48,18 @@
 </section>
 <aside>  <!--Ete es el que va a la izquierda-->
 	<div id="ajax">
-		citas del dia
+		<?php  
+			include_once('php/lista_citas.php');
+		?>
 	</div>	
 </aside>
 </section>
-<footer>Dentalapp</footer>
+
 <!--  -->
 	<script type="text/javascript" src="js/ajax.js"></script>
 	<script type="text/javascript" src="js/menu.js"></script>
+	<script type="text/javascript" src="js/teclado.js"></script>
+	<script type="text/javascript" src="js/valDatos.js"></script>
 <!--  -->
 </body>
 </html>

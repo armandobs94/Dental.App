@@ -6,27 +6,28 @@
 <body>
 <div id="dir">
 	<label>Estas en: <b>Inicio/</b><i>Cita ocasional</i></label>
-		<br><br>
+</div>	
+<br>	
 	<div>
-		<label>Nombre:</label>
+		<label>Nombre completo:</label>
 		<br>
-		<input type="text" name="nombre" id="nombre" placeholder="Nombre completo">
-		<input type="text" name="apellido_p" id="apellido_p" placeholder="Apellido paterno">
-		<input type="text" name="apellido_m" id="apellido_m" placeholder="Apellido materno">
+		<input type="text" name="nombre" id="nombre" placeholder="Nombre(s)" onkeypress="return soloLetras(event)" onblur="mayus(this)">
+		<input type="text" name="apellido_p" id="apellido_p" placeholder="Apellido paterno" onkeypress="return soloLetras(event)" onblur="mayus(this)">
+		<input type="text" name="apellido_m" id="apellido_m" placeholder="Apellido materno" onkeypress="return soloLetras(event)" onblur="mayus(this)">
 		<br>
 		<label>Edad:</label>
-		<input type="number" name="edad" placeholder="Edad">
+		<input type="number" id="edad" name="edad" placeholder="Edad" onkeypress="return soloNum(event)">
 		<label>Telefono Casa/Cel:</label>
-		<input type="number" name="telefono" placeholder="Telefono">
+		<input type="number" id="telefono" name="telefono" placeholder="Telefono" onkeypress="return soloNum(event)">
 		<br>
 		<label>Observaciones:</label>
 		<br>
-		<textarea name="observaciones" rows="6" cols="50" maxlength="1200" placeholder="Ingrese sus observaciones"></textarea>
+		<textarea id="observaciones" name="observaciones" rows="6" cols="50" maxlength="1200" placeholder="Ingrese sus observaciones"></textarea>
 		<br>
 		<label>Prosupuesto estimado:</label>
-		<input type="number" name="presupuesto" placeholder="Prosupuesto estimado"><br>
-		<button>Enviar</button>
+		<input type="number" id="presupuesto" name="presupuesto" placeholder="Prosupuesto estimado" onkeypress="return soloNum(event)">
+		<br>
 	</div>
-</div>
+	<button onclick="insData()">Guardar</button>
 </body>
 </html>

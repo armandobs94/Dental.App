@@ -5,6 +5,7 @@ var c = document.getElementById('g_u');
 var d = document.getElementById('g_d');
 var e = document.getElementById('g_t');
 
+
 //Carga el formulario de citas por periodo
 a.onclick = function(){
 	menuChange("citas_periodo.html");

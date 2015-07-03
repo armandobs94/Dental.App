@@ -13,20 +13,27 @@
 	</div>
 	<div>
 		<p>Nombre:</p>
-		<input type="text" name="nombre" placeholder="Nombre completo">
-		<input type="text" name="apellido" placeholder="Apellidos Paterno/Materno">
+		<input type="text" id="nombre1" placeholder="Nombre(s)" onkeypress="return soloLetras(event)" onblur="mayus(this)">
+		<input type="text" id="apellido_p1"  placeholder="Apellido paterno" onkeypress="return soloLetras(event)" onblur="mayus(this)">
+		<input type="text" id="apellido_m1"  placeholder="Apellido materno" onkeypress="return soloLetras(event)" onblur="mayus(this)">
+
 		<p>Edad:</p>
-		<input type="number" name="edad" placeholder="Edad" >
+		<input type="number" id="edad1" name="edad" placeholder="Edad" onkeypress="return soloNum(event)">
+
 		<p>Telefono Casa/Cel:</p>
-		<input type="number" name="telefono" placeholder="Telefono">
+		<input type="number" id="telefono1" name="telefono" placeholder="Telefono" onkeypress="return soloNum(event)">
+
 		<p>Observaciones:</p>
-		<textarea name="observaciones" rows="6" cols="50" maxlength="1200" placeholder="Ingrese sus observaciones"></textarea>
+		<textarea id="observaciones1" rows="6" cols="50" maxlength="1200" placeholder="Ingrese sus observaciones"></textarea>
+
 		<p>Cita:</p>
-		<input type="date" name="fecha">
-		<input type="time" name="hora">
+		<input type="date" id="fecha1">
+		<input type="time" id="hora1">
+
 		<p>Prosupuesto estimado:</p>
-		<input type="number" name="prosupuesto" placeholder="Prosupuesto estimado"><br>
-		<button>Enviar</button>
+		<input type="number" id="presupuesto1" name="presupuesto" placeholder="Prosupuesto estimado" onkeypress="return soloNum(event)">
+		<br>
+		<button onclick="periodo()">Enviar</button>
 	</div>
 </div>
 </body>
