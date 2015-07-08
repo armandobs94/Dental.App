@@ -18,7 +18,7 @@ class resivir_post {
 			$row = mysqli_fetch_array($query);
 				session_start();
 				$_SESSION['user'] = $row['user'];
-				header('Location:../bienvenido.php');
+				header('Location: ../bienvenido.php');
 				exit;
 		}else{
 			echo "<script>

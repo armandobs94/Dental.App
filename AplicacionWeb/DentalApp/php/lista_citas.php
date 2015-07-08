@@ -1,11 +1,17 @@
 <?php  
 	include_once('conexion.php');
+	$f = $_GET['fecha'];
 	date_default_timezone_set("America/Mexico_City");//se define la zona horaria
 	$anio = date('Y');//obtenemos el año
 	$mes = date('m');//se obtiene el mes
 	$dia = date('d');//se obtiene el dia
-	$d = $dia;
-	$fecha=$anio."-".$mes."-".$d;//se construye la fecha completa	
+	$d = $dia;	
+		if(empty($f)){
+			$fecha=$anio."-".$mes."-".$d;//se construye la fecha completa
+		}else{
+			$fecha = $f;
+		}
+		
 ?>
 <div id="dir">
 	<label>Estas en: <b>Inicio/</b><i>Cita ocasional</i></label>
@@ -18,7 +24,7 @@
 	</tr>
 	<?php  
 		//Verificar si hay registros para mostrar.
-		$sql = "SELECT * FROM citas WHERE fecha='$fecha' ORDER BY hora";
+		$sql = "SELECT * from citas WHERE fecha = '$fecha' ORDER BY fecha" ;
 		$exe = mysqli_query($cont,$sql);//ejecuta la consulta
 		$cuenta = mysqli_num_rows($exe);//su cuentan los registros encontrados
 
@@ -202,49 +208,127 @@
 				}//temina cita 12
 
 				//cita 11
-				if($h=='17' && $m=='00') {
-					
+				if($h=='15' && $m=='30') {
+?>
+				<tr>
+					<td>15:30 - 16:00</td>
+					<td> <?php echo $row['clienteID'] ?> </td>
+					<td> <select><option>-</option><option value="1">Si</option><option value="0">No</option></select> </td>
+				</tr>
+<?php 					
 				}else{
 
 				}//temina cita 11
 				
 				//cita 12
-				if($h=='17' && $m=='30') {
-					
+				if($h=='16' && $m=='00') {
+?>
+				<tr>
+					<td>16:00 - 16:30</td>
+					<td> <?php echo $row['clienteID'] ?> </td>
+					<td> <select><option>-</option><option value="1">Si</option><option value="0">No</option></select> </td>
+				</tr>
+<?php 					
 				}else{
 
 				}//temina cita 12
 
 				//cita 13
-				if($h=='18' && $m=='00') {
-					
+				if($h=='16' && $m=='30') {
+?>
+				<tr>
+					<td>16:30 - 17:00</td>
+					<td> <?php echo $row['clienteID'] ?> </td>
+					<td> <select><option>-</option><option value="1">Si</option><option value="0">No</option></select> </td>
+				</tr>
+<?php 					
 				}else{
 
 				}//temina cita 13
 
 				//cita 14
-				if($h=='18' && $m=='30') {
-					
+				if($h=='17' && $m=='00') {
+?>
+				<tr>
+					<td>17:00 - 17:30</td>
+					<td> <?php echo $row['clienteID'] ?> </td>
+					<td> <select><option>-</option><option value="1">Si</option><option value="0">No</option></select> </td>
+				</tr>
+<?php 					
 				}else{
 
 				}//temina cita 14
 
 				//cita 15
-				if($h=='19' && $m=='00') {
-					
+				if($h=='17' && $m=='30') {
+?>
+				<tr>
+					<td>17:30 - 18:00</td>
+					<td> <?php echo $row['clienteID'] ?> </td>
+					<td> <select><option>-</option><option value="1">Si</option><option value="0">No</option></select> </td>
+				</tr>
+<?php					
 				}else{
 
 				}//temina cita 15
 
 				//cita 16
-				if($h=='19' && $m=='30') {
-					
+				if($h=='18' && $m=='00') {
+?>
+				<tr>
+					<td>18:00 - 18:30</td>
+					<td> <?php echo $row['clienteID'] ?> </td>
+					<td> <select><option>-</option><option value="1">Si</option><option value="0">No</option></select> </td>
+				</tr>
+<?php 					
 				}else{
 
 				}//temina cita 16
 
+				//cita 17
+				if($h=='18' && $m=='30') {
+?>
+				<tr>
+					<td>18:30 - 19:00</td>
+					<td> <?php echo $row['clienteID'] ?> </td>
+					<td> <select><option>-</option><option value="1">Si</option><option value="0">No</option></select> </td>
+				</tr>
+<?php 					
+				}else{
 
+				}//temina cita 17
+				
+				//cita 18
+				if($h=='19' && $m=='00') {
+?>
+				<tr>
+					<td>19:00 - 19:30</td>
+					<td> <?php echo $row['clienteID'] ?> </td>
+					<td> <select><option>-</option><option value="1">Si</option><option value="0">No</option></select> </td>
+				</tr>
+<?php 					
+				}else{
 
+				}//temina cita 18
+
+				//cita 19
+				if($h=='19' && $m=='30') {
+?>
+				<tr>
+					<td>19:30 - 20:00</td>
+					<td> <?php echo $row['clienteID'] ?> </td>
+					<td> <select><option>-</option><option value="1">Si</option><option value="0">No</option></select> </td>
+				</tr>
+<?php 					
+				}else{
+?>
+				<tr>
+					<td>19:30 - 20:00</td>
+					<td> <a href="#">Agregar cita</a> </td>
+					<td> <select><option>-</option><option value="1">Si</option><option value="0">No</option></select> </td>
+				</tr>
+<?php
+				}//temina cita 19	
 			}
 		}else{
 			echo "No se encontraron registros.";
