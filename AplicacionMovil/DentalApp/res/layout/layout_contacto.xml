@@ -19,33 +19,23 @@
             android:orientation="vertical" >
 
             <EditText
-                android:id="@+id/edit_nombre_c"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20dp"
-                android:ems="10"
-                android:hint="@string/campoNombre" >
-
-                <requestFocus />
-            </EditText>
-
-            <EditText
                 android:id="@+id/edit_asunto_c"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="50dp"
                 android:ems="10"
+                android:textColorHint="#000"
                 android:hint="@string/campoAsunto" />
 
             <EditText
                 android:id="@+id/edit_comentario_c"
                 android:layout_width="250dp"
-                android:layout_height="wrap_content"
+                android:layout_height="150dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="45dp"
                 android:ems="10"
+                android:textColorHint="#000"
                 android:hint="@string/campoComentario"
                 android:inputType="textMultiLine"
                 android:paddingTop="80dp"

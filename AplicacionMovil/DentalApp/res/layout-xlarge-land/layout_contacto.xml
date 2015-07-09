@@ -19,22 +19,8 @@
             android:orientation="vertical" >
 
             <EditText
-                android:id="@+id/edit_nombre_c"
-                android:layout_width="550dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="100dp"
-                android:ems="10"
-                android:hint="@string/campoNombre"
-                android:textColorHint="#000"
-                android:textSize="40sp" >
-
-                <requestFocus />
-            </EditText>
-
-            <EditText
                 android:id="@+id/edit_asunto_c"
-                android:layout_width="550dp"
+                android:layout_width="650dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="50dp"
@@ -45,8 +31,8 @@
 
             <EditText
                 android:id="@+id/edit_comentario_c"
-                android:layout_width="550dp"
-                android:layout_height="wrap_content"
+                android:layout_width="650dp"
+                android:layout_height="350dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="25dp"
                 android:ems="10"

@@ -47,7 +47,7 @@
     <Button
         android:id="@+id/btn_login"
         android:layout_width="100dp"
-        android:layout_height="35dp"
+        android:layout_height="40dp"
         android:layout_alignRight="@+id/edit_contra"
         android:layout_below="@+id/edit_contra"
         android:layout_marginTop="37dp"

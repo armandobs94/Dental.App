@@ -33,8 +33,9 @@ public class MainActivity extends Activity {
 	EditText et_password;
 	Button b_login;
 	Httppostaux post;
-	String IP_Server="192.168.1.66";//IP DE NUESTRO SERVER
-	String URL_connect="http://"+IP_Server+"/DentalApp/log_movil/acces.php";//ruta en donde estan nuestros archivos
+	//String IP_Server="192.168.1.66";//IP DE NUESTRO SERVER
+	String IP_Server="10.10.3.233";//IP DE NUESTRO SERVER
+	String URL_connect="http://"+IP_Server+"/dentalapp/log_movil/acces.php";//ruta en donde estan nuestros archivos
 	boolean result_back;
     private ProgressDialog pDialog;
 
@@ -47,6 +48,9 @@ public class MainActivity extends Activity {
 		et_usuario = (EditText)findViewById(R.id.edit_usuario);
 		et_password = (EditText)findViewById(R.id.edit_contra);
 		b_login = (Button)findViewById(R.id.btn_login);
+		
+		et_usuario.setText("");
+		et_password.setText("");
 		
 		b_login.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -102,8 +106,7 @@ public class MainActivity extends Activity {
         protected void onPostExecute(String result) {
            pDialog.dismiss();//ocultamos progess dialog.
            Log.e("onPostExecute=",""+result);
-           if (result.equals("ok")){
-        	   
+           if (result.equals("ok")){ 
 				Intent i = new Intent(getApplicationContext(), PrincipallView.class);
 				i.putExtra("user", user);
 				startActivity(i);

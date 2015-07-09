@@ -1,8 +1,11 @@
 package integradora.dental.v2;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 
@@ -22,7 +25,7 @@ public class PrincipallView extends Activity{
          	   user="error";
          	   }
           //cambiamos texto al nombre del usuario logueado   	 
-          Toast.makeText(getApplicationContext(), user, Toast.LENGTH_SHORT).show();                      
+          Toast.makeText(getApplicationContext(), "Bienvenido: "+user, Toast.LENGTH_LONG).show();                      
 	 }
 	 
 //Definimos que para cuando se presione la tecla BACK no volvamos para atras  	 
@@ -35,4 +38,35 @@ public class PrincipallView extends Activity{
 
 	     return super.onKeyDown(keyCode, event);
 	 }
+	 
+		@Override
+	    public boolean onCreateOptionsMenu(Menu menu) {
+	        // Inflate the menu; this adds items to the action bar if it is present.
+	        getMenuInflater().inflate(R.menu.main, menu);
+	        return true;
+	    }
+
+		 @Override
+		    public boolean onOptionsItemSelected(MenuItem item) {
+		        switch (item.getItemId()) {
+		       
+		        case R.id.item1:
+		        //Contacto
+		            Toast.makeText(this, "Espere...",
+		                    Toast.LENGTH_SHORT).show();
+		            	Intent i = new Intent(getApplicationContext(), VistaContacto.class);
+		            	startActivity(i); 
+		            break;
+		            
+		        case R.id.item2:
+		           //Pagos
+		            break;
+		        case R.id.item3:
+		        	//Salir
+		        	finish();
+		        	break;
+		        }
+			
+		        return true;
+		    }
 }

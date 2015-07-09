@@ -28,16 +28,16 @@ public final class R {
     public static final class id {
         public static final int Contacto=0x7f060000;
         public static final int Pagar=0x7f060001;
-        public static final int btn_enviar_c=0x7f06000c;
+        public static final int btn_enviar_c=0x7f06000b;
         public static final int btn_login=0x7f060003;
-        public static final int edit_asunto_c=0x7f06000a;
-        public static final int edit_comentario_c=0x7f06000b;
+        public static final int edit_asunto_c=0x7f060009;
+        public static final int edit_comentario_c=0x7f06000a;
         public static final int edit_contra=0x7f060004;
-        public static final int edit_nombre_c=0x7f060009;
         public static final int edit_usuario=0x7f060005;
         public static final int imageView1=0x7f060002;
-        public static final int item1=0x7f06000d;
-        public static final int item2=0x7f06000e;
+        public static final int item1=0x7f06000c;
+        public static final int item2=0x7f06000d;
+        public static final int item3=0x7f06000e;
         public static final int scrollView1=0x7f060008;
         public static final int textView1=0x7f060006;
         public static final int textView2=0x7f060007;
