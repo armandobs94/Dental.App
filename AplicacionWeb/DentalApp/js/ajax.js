@@ -1,4 +1,3 @@
-//No mover esta funcion
 //Se encarga de generar el objeto Ajax de acuerdo al navegador
 function objetoAjax(){
 	var xmlhttp=false;

@@ -9,17 +9,17 @@
 	$fecha=$anio."-".$mes."-".$d;//se construye la fecha completa
 	
 	//Seleccionar todos los datos y agruparlos por fecha.
-	$SQL = "SELECT * FROM citas WHERE fecha = '$fecha' ORDER BY hora";
+	$SQL = "SELECT * FROM citas WHERE fecha = '$fecha' ORDER BY horario";
 	$S = mysqli_query($cont, $SQL);
 
 	$total = mysqli_num_rows($S);//Cuenta el total de registros encontrados.
 
-	echo $total;
+	//echo $total;
 
 	if($total >=1){
 		while ($row = mysqli_fetch_array($S)) {//se recorren todos los datos
 		
-		$horario = explode(":", $row['hora']);//separar la fecha
+		$horario = explode(":", $row['horario']);//separar la fecha
 
 		$hora = $horario[0];//separa el año.
 		$min = $horario[1];//separa el mes.
@@ -30,11 +30,12 @@
 				"hora" => $hora,
 				"min" => $min
 			);
+		$js = json_encode($ob);
+		//echo sprintf($js);//echo $js;
 	}
-		echo json_encode($ob);//Se crea un objeto json para enviar todas las fechas	
+		echo $js;		
 	}else{
 		echo "error";
 	}
-
 
 ?>

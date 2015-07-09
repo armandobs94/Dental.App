@@ -1,149 +1,32 @@
-
-
-
-*{
-	margin: 0;
-	padding: 0;
-}
-
-*{
-border: 0;
-margin: 0;
-padding: 0;
-}
-
-
-article,figcaption,figure,footer,header,hgroup,nav,section{
-	display: block;
-}
-
-
-
-/* 16 px = 12pt = 100% = 1em es el ancho de la letra M */
-
-body{
-	background: #E6E6E6 ; 
-	background-repeat: no-repeat;
-	background-position: right;
-	font-size: 1em; 
-} 		
-
-
-a{
-	color:black;
-	font-weight: bold;
-	text-decoration: none;
-}
-
-a:hover{ /*pasar el mouse sobre el enlace*/
-	color: #FF0040;
-}
-
-
-
-
-img,video{
-	max-width: 100%;
-}
-
-
-
-
-
-
 section#contenedor{
 margin: 0 auto;
-max-width: 40%;
+max-width: 80;
 text-align: center;
-}
-
-
-header h1,nav,img{
-
-	
-	max-width: 100%;
-	vertical-align: top;
-
-}
-
-
-
-input{
-	display: inline-block;
-border: 0.1em solid #29088A;
-	padding: 	0.4em;
-	float: right;
-
-}
-
-
-div{
-
-	float: 	right;	
-	font-size: 	0.7em;
-}
-
-
-/**/
-
-/
-article#galeria-inicio{
-	
-	margin: 0.5em;
-	padding: 0.7em;
-	text-align: left;
 border-radius: 0.5em;
-display:inline-block;
-margin:  auto;
-max-width: 100%;
-min-height: 100%; 
+margin-top: 7%;
+
+}
+
+
+section#principal,aside{
+background: white;
+border-radius: 0.5em;
+display: inline-block;  /*los alinie en el mismo bloque*/
 margin: 0 auto;
-max-width: 80%;
-text-align: center;
+max-width: 70%;
+padding: 0.25em;
+vertical-align: top;
+width: 20%;
+text-align: left;
 
+/*opacity: 0.5;*/
 
 }
 
 
-.fade{
-	-ms-transition: all 0.5s ease-in;
--mos-transition: all 0.5s ease-in;
--o-transition: all 0.5s ease-in;
--webkit-transition: all 0.5s ease-in;
-transition: all 0.5s ease-in;
-opacity:1;
-filter:alpha(opacity=10);   /*para que el explorer lo lea bien*/ 
+
+aside{
+	background: white;
+width:63%;
 }
 
-.fade:hover{
-	-ms-transition: all 0.5s ease-out;
--mos-transition: all 0.5s ease-out;
--o-transition: all 0.5s ease-out;
--webkit-transition: all 0.5s ease-out;
-transition: all 0.5s ease-out;
-opacity:.5;
-filter:alpha(opacity=5);   /*para que el explorer lo lea bien*/ 
-}
-
-#btn{
-	float: right;
-	margin-left: 2px;
-	/*border-color: blue;
-	background-color: white;*/
-	background:-moz-linear-gradient(#fff 0%,#fff 100%); 
-	background:-ms-linear-gradient(#fff 0%,#fff 100%);
-	background:-o-linear-gradient(#fff 0%,#fff 100%); 
-	background:-webkit-linear-gradient(#fff 0%,#fff 100%);
-	background:linear-gradient(#fff 0%,#fff 100%);
-	border:solid 1px #2E2EFE; 
-	border-radius:5px;
-	text-align:center;
-	padding:5px; 
-	color:#190707;
-	width:75px;
-	}
-
-#btn:hover{
-	background:-moz-linear-gradient(#190707 0%,#fff 100%);
-	color:#999; 
-}
