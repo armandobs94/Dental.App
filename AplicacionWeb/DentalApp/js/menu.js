@@ -1,30 +1,14 @@
 // Elementos del menu
-var a = document.getElementById('c_u');
-var b = document.getElementById('c_d');
-var c = document.getElementById('g_u');
-var d = document.getElementById('g_d');
-var e = document.getElementById('g_t');
-
+var citaO = document.getElementById('c_d');
+var gCliente = document.getElementById('g_cliente');
+var gCita = document.getElementById('g_cita');
 
 //Carga el formulario de citas por periodo
-a.onclick = function(){
-	menuChange("citas_periodo.html");
+citaO.onclick = function(){
+	menuChange("citas_ocasionales.php");
 }
-
-b.onclick = function(){
-	menuChange("citas_ocacionales.html");
-}
-
-c.onclick = function(){
-	menuChange("reporte_general.html");
-}
-
-d.onclick = function(){
-	menuChange("reporte_periodo.html");
-}
-
-e.onclick = function(){
-	menuChange("reporte_cliente.html");
+g_cliente.onclick = function(){
+	menuChange("gen_cliente.php");
 }
 
 function menuChange(opc){
@@ -36,9 +20,43 @@ function menuChange(opc){
 	 }
 	xmlhttp.onreadystatechange=function(){
 	 if (xmlhttp.readyState==4 && xmlhttp.status==200){
-	   	document.getElementById("ajax").innerHTML=xmlhttp.responseText;
+	   	document.getElementById("listado").innerHTML=xmlhttp.responseText;
 	   }
 	 }
 	xmlhttp.open("POST","forms/"+opc,true);
 	xmlhttp.send();
 }
+
+function mostrarOpcion(idElemento,archivo){
+	var xmlhttp;
+	if (window.XMLHttpRequest){
+	 	xmlhttp=new XMLHttpRequest();
+	 }else{
+	 	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	 }
+	xmlhttp.onreadystatechange=function(){
+	 if (xmlhttp.readyState==4 && xmlhttp.status==200){
+	   	document.getElementById("listado").innerHTML=xmlhttp.responseText;
+	   }
+	 }
+	xmlhttp.open("POST","forms/"+opc,true);
+	xmlhttp.send();
+}
+
+//carga el user de acuerdo al user
+function cargarCita(elem,opc){
+	var xmlhttp;
+	if (window.XMLHttpRequest){
+	 	xmlhttp=new XMLHttpRequest();
+	 }else{
+	 	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	 }
+	xmlhttp.onreadystatechange=function(){
+	 if (xmlhttp.readyState==4 && xmlhttp.status==200){
+	   	document.getElementById(elem).innerHTML=xmlhttp.responseText;
+	   }
+	 }
+	xmlhttp.open("POST",opc,true);
+	xmlhttp.send();
+}
+

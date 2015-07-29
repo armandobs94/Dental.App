@@ -22,7 +22,7 @@ class funciones_BD {
    
 	public function login($user,$passw){
 
-	$result=mysql_query("SELECT COUNT(*) FROM usuarios WHERE clave_user='$user' AND passw='$passw' "); 
+	$result=mysql_query("SELECT COUNT(*) FROM clientes WHERE clave_cliente='$user' AND llave_cliente='$passw' AND tipoCliente = 2 "); 
 	$count = mysql_fetch_row($result);
 
 	/*como el usuario debe ser unico cuenta el numero de ocurrencias con esos datos*/

@@ -1,11 +1,10 @@
 @media screen and (min-width: 700px){
 	body{
-	background: #E6E6E6 ; 
+	/*background: #E6E6E6 ; 
 	background-repeat: no-repeat;
-	background-position: right;
+	background-position: right;*/
 	font-size: 1em; 
 } 		
-
 
 a{
 	color:black;
@@ -17,17 +16,9 @@ a:hover{ /*pasar el mouse sobre el enlace*/
 	color: #FF0040;
 }
 
-
-
-
 img,video{
 	max-width: 100%;
 }
-
-
-
-
-
 
 section#contenedor{
 margin: 0 auto;
@@ -37,8 +28,6 @@ text-align: center;
 
 
 header h1,nav,img{
-
-	
 	max-width: 100%;
 	vertical-align: top;
 

@@ -13,7 +13,7 @@ class resivir_post {
     function login() {
 
 		include("conexion.php");
-		$query = mysqli_query($cont,"SELECT * FROM administradores WHERE user = '$this->user' AND password = '$this->password'");
+		$query = mysqli_query($cont,"SELECT * FROM administrador WHERE user = '$this->user' AND password = '$this->password'");
 		if(mysqli_num_rows($query) == 1){
 			$row = mysqli_fetch_array($query);
 				session_start();

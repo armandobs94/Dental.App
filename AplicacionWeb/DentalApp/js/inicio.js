@@ -12,4 +12,5 @@ window.onload = function(){
 	});	
 	
 	cargarLista();
+	mueveReloj();
 }
