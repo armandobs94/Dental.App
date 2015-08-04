@@ -103,6 +103,32 @@ function guardarDatos(datos){
   ajax.send()
 }
 
+function calendarioLista(fecha){
+  cargarCita("listado","php/citas.php");
+  var caja = document.getElementById('caja_datos');
+  var xmlhttp;
+  if( window.XMLHttpRequest ){
+    xmlhttp = new XMLHttpRequest();
+  }else if(window.ActiveXObject) {
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }else{
+    return false;
+  }
+xmlhttp.open('POST', 'php/lista_citas.php?fecha='+fecha);
+ xmlhttp.onreadystatechange = function(){
+    if(xmlhttp.readyState == 4 && xmlhttp.status == 200 ){
+      var resultado_A = xmlhttp.responseText;
+      //json_V = eval("(" + resultado_A + ")");//necesario parse el json
+      cadenaFechaB = resultado_A;
+      caja.value=cadenaFechaB;
+      //se llama a funcion para cargar datos a la cita correspondiente
+      datosForm();
+    }
+
+  }
+  xmlhttp.send(null);
+}
+
 
 
 

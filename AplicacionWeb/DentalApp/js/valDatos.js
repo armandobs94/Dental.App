@@ -40,8 +40,11 @@ function newCliente(){
 	var nuExt = document.getElementById('num_ext').value;
 	var col = document.getElementById('colonia').value;
 	var cp = document.getElementById('cp').value;
+	var alergia = document.getElementById('alergia').value;
+	var servicio = document.getElementById('servicio').value;
+	var presupuesto = document.getElementById('presupuesto').value;
 	
-	if(nombre=="" || apellidoPa=="" || apellidoMa=="" || edad=="" || sexo=="" || tel==""){
+	if(nombre=="" || apellidoPa=="" || apellidoMa=="" || edad=="" || sexo=="" || tel=="" || servicio==0 || presupuesto==""){
 		alert('Favor de llenar todos los campos');
 	}else{
 		if(tel.length!= 10){
@@ -50,7 +53,7 @@ function newCliente(){
 			if(edad >= 100 || edad<=2){
 				alert('Edad no válida');
 			}else{
-				guardaCliente(nombre, apellidoPa, apellidoMa, edad, sexo, tel, calle, nuInt, nuExt, col, cp, clave,llave);
+				guardaCliente(nombre, apellidoPa, apellidoMa, edad, sexo, tel, calle, nuInt, nuExt, col, cp, clave,llave,alergia, servicio, presupuesto);
 			}
 		}
 	}
@@ -66,9 +69,9 @@ function guardaCitaOcacional(nombre, apellido_p, apellido_m, edad, sexo, telefon
 }
 
 /*Funcion para guardar datos del cliente*/
-function guardaCliente(nombre, apellidoP, apellidoM, edad, sexo, tel, calle, nuInt, nuExt, col, cp, clave, llave){
+function guardaCliente(nombre, apellidoP, apellidoM, edad, sexo, tel, calle, nuInt, nuExt, col, cp, clave, llave, alergia, servicio, presupuesto){
 	var ruta = "php/ingresar_cliente.php?";
-	var datos = ruta+"nombre="+nombre+"&apellidoP="+apellidoP+"&apellidoM="+apellidoM+"&edad="+edad+"&sexo="+sexo+"&tel="+tel+"&calle="+calle+"&numInt="+nuInt+"&numExt="+nuExt+"&col="+col+"&cp="+cp+"&clave="+clave+"&contra="+llave;
+	var datos = ruta+"nombre="+nombre+"&apellidoP="+apellidoP+"&apellidoM="+apellidoM+"&edad="+edad+"&sexo="+sexo+"&tel="+tel+"&calle="+calle+"&numInt="+nuInt+"&numExt="+nuExt+"&col="+col+"&cp="+cp+"&clave="+clave+"&contra="+llave+"&alergia="+alergia+"&servicio="+servicio+"&presupuesto="+presupuesto;
 	guardarDatos(datos);
 }
 

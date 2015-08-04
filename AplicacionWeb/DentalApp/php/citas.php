@@ -61,6 +61,9 @@
 				<td> <select><option>-</option><option value="1">Si</option><option value="0">No</option></select> </td>
 			</tr>
 			<tr>
+				<td colspan="3">Descanso</td>
+			</tr>
+			<tr>
 				<td>16:00 - 16:30</td>
 				<td><div id="ci_11"> <a href="#">Agregar cita</a></div> </td>
 				<td> <select><option>-</option><option value="1">Si</option><option value="0">No</option></select> </td>

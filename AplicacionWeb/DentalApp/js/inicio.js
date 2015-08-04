@@ -7,10 +7,12 @@ window.onload = function(){
 		
 	g_globalObject.setOnSelectedDelegate(function(){
 		var obj = g_globalObject.getSelectedDay();
-		alert("Fecha seleccionada es : " + obj.day + "-" + obj.month + "-" + obj.year);
-		//document.getElementById("div3_example_result").innerHTML = obj.day + "/" + obj.month + "/" + obj.year;
+		var fechaS = obj.year+"-"+obj.month+"-"+obj.day; 
+		//alert(fechaS);
+		calendarioLista(fechaS);
 	});	
 	
 	cargarLista();
 	mueveReloj();
+
 }

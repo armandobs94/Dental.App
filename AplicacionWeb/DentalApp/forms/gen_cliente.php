@@ -22,7 +22,13 @@
 			<option value="F">Femenino</option>
 		</select>
 		<input type="number" id="telefono_c" placeholder="Teléfono" onkeypress="return soloNum(event)">
-		<!-- <textarea placeholder="Alergia(s)" id="alergia" rows="10" cols="10"></textarea> -->
+		<textarea placeholder="Alergia(s)" id="alergia" onblur="mayus(this)"></textarea>
+		<select id="servicio">
+			<option value="0" selected>Seleccionar el tipo de servicio</option>
+			<option value="1">Brackers</option>
+			<option value="3">Otro</option>
+		</select>
+		<input type="number" id="presupuesto" placeholder="Presupuesto $" onkeypress="return soloNum(event)">
 	</div>
 <label>Detalles del domicilio.</label>	
 	<div id="datos_dos">

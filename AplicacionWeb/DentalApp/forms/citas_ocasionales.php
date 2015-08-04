@@ -34,7 +34,7 @@
 		<textarea id="observaciones" name="observaciones" rows="6" cols="50" maxlength="1200" placeholder="Ingrese sus observaciones"></textarea>
 		<br>
 		<p>Pago:</p><BR>
-		<input type="number" id="presupuesto" name="presupuesto" placeholder="Prosupuesto estimado" onkeypress="return soloNum(event)">
+		<input type="number" id="presupuesto" name="presupuesto" placeholder="Pago" onkeypress="return soloNum(event)">
 		<br>
 	</div>
 	<button onclick="insData()">Guardar</button>
