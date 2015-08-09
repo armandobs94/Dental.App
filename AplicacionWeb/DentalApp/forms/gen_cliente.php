@@ -17,7 +17,7 @@
 		<label>Edad</label>
 		<input type="number" id="edad_c" placeholder="Edad" onkeypress="return soloNum(event)">
 		<select id="sexo_c">
-			<option value="0" selected>Seleccionar</option>
+			<option value="0" selected>Sexo</option>
 			<option value="M">Masculino</option>
 			<option value="F">Femenino</option>
 		</select>

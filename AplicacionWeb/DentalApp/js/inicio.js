@@ -10,9 +10,10 @@ window.onload = function(){
 		var fechaS = obj.year+"-"+obj.month+"-"+obj.day; 
 		//alert(fechaS);
 		calendarioLista(fechaS);
+		verFecha(fechaS);
 	});	
 	
 	cargarLista();
 	mueveReloj();
-
+	verFecha("");
 }

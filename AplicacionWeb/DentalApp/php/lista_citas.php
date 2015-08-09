@@ -22,7 +22,7 @@
 /**
 * @brief Seleccionar todos los datos y agruparlos por fecha
 */
-	$SQL = "SELECT * FROM citas WHERE fecha = '$fecha' ORDER BY horario";
+	$SQL = "SELECT * FROM citas WHERE fecha = '$fecha' ORDER BY horario AND tipoCita = 2";
 	$S = mysqli_query($cont, $SQL);
 
 	$total = mysqli_num_rows($S);//Cuenta el total de registros encontrados.

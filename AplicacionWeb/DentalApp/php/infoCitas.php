@@ -13,20 +13,20 @@
 	/**
 	* @brief Se cargan los datos de cliente
 	*/
-	$SQL = "SELECT * FROM clientes WHERE clave_cliente = '$user' LIMIT 0,1";
+	$SQL = "SELECT A.clave_cliente, A.nombre, A.apellido_p, A.apellido_m, B.telefono FROM clientes A, informacion_cliente B WHERE A.clave_cliente = '$user' AND B.clave_cliente = '$user' LIMIT 0,1";
 	$result = mysqli_query($cont, $SQL);
 	while ($row = mysqli_fetch_array($result)){
 
 		/**
 		* @brief Se muestran los datos del cliente
 		*/
+		$clave = $row['clave_cliente'];
+		$nombre = $row['nombre'];
+		$apellidoP = $row['apellido_p'];
+		$apellidoM = $row['apellido_m'];
 ?>
-	<tr>
-	<input type="hidden" id="id_user" value="<?php echo $row['id_cliente']; ?>">
-		<a href=""> 
-		<?php echo $row['nombre']; ?>
-		<?php echo $row['apellido_p']; ?>
-		<?php echo $row['apellido_m']; ?>
+	<a href="#"> 
+		<?php echo $nombre. " ". $apellidoP. " ". $apellidoM ?>
 	</a>
 <?php 		
 	}

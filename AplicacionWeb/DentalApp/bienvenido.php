@@ -27,6 +27,7 @@
 <body>
 <input type="hidden" id="caja_datos" readonly>
 <input type="hidden" id="hora" readonly>
+<input type="hidden" id="campoFecha">
 	<header class="container">		
 		<nav class="navbar">
 			<div class="container-fluid">			    

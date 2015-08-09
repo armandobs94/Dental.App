@@ -60,10 +60,33 @@ function newCliente(){
 	
 }
 
+function citaPeriodo(){
+	var fecha = document.getElementById('c_fecha').value;
+	var hora = document.getElementById('c_hora').value;
+	var clave = document.getElementById('c_clave').value;
+
+	if(fecha=="" || hora=="" || clave==""){
+		alert("No se encontro ningun cliente");
+	}else{
+		
+		guardaCitaPeriodo(clave, fecha, hora);
+	}
+	
+}
+
 /*Funcion para guardar datos de una cita ocacional*/ 
 function guardaCitaOcacional(nombre, apellido_p, apellido_m, edad, sexo, telefono, observaciones, pago, hora){
 	var ruta = "php/citas_ocasional.php?";
 	var datos = ruta+"nombre="+nombre+"&apellidoP="+apellido_p+"&apellidoM="+apellido_m+"&edad="+edad+"&tel="+telefono+"&pago="+pago+"&obs="+observaciones+"&sexo="+sexo+"&hora="+hora;
+	guardarDatos(datos);
+	
+}
+
+/*Guardar cita por periodo*/
+function guardaCitaPeriodo(clave, fecha, hora){
+	var ruta = "php/citas-periodo.php?";
+	var datos = ruta+"clave="+clave+"&fecha="+fecha+"&hora="+hora;
+	
 	guardarDatos(datos);
 	
 }
@@ -82,10 +105,23 @@ function mueveReloj(){
 	hora = momentoActual.getHours();
 	minuto = momentoActual.getMinutes();
 	segundo = momentoActual.getSeconds();
-
+	
 	horaImprimible = hora + ":" + minuto + ":" + segundo; 
 
 	document.getElementById('hora').value = horaImprimible;
-
+	
 	setTimeout("mueveReloj()",1000);
+}
+
+//fecha
+function verFecha(fecha){
+	if(fecha == ""){
+		momentoActual = new Date();
+		dia = momentoActual.getDate();
+		mes = momentoActual.getMonth()+1;
+		anio = momentoActual.getFullYear();
+		document.getElementById('campoFecha').value = anio+"-"+mes+"-"+dia;
+	}else{
+		document.getElementById('campoFecha').value = fecha;
+	}
 }
