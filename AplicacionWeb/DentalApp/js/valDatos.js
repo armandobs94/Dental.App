@@ -98,6 +98,16 @@ function guardaCliente(nombre, apellidoP, apellidoM, edad, sexo, tel, calle, nuI
 	guardarDatos(datos);
 }
 
+//muestra informacion de la cita del cliente.
+function mostrarInfo(clave){
+	//alert(clave);
+	var hh = document.getElementById('hora').value;
+	var ff = document.getElementById('campoFecha').value;
+	var ruta = "php/citas_informacion.php?clave="+clave+"&hora="+hh+"&fecha="+ff;
+	guardarDatos(ruta);
+
+}
+
 //reloj
 function mueveReloj(){
 	//alert("hora")
@@ -123,5 +133,49 @@ function verFecha(fecha){
 		document.getElementById('campoFecha').value = anio+"-"+mes+"-"+dia;
 	}else{
 		document.getElementById('campoFecha').value = fecha;
+	}
+}
+
+//Modificar estado de cita de acuerdo al cliente
+function modDatos(clave){
+	var aa = document.getElementById('obs_f').value;
+	var bb = document.getElementById('asisT').value;
+	var cc = document.getElementById('pago_s').value;
+	var dd = document.getElementById('pago_to').value;
+	var s_to = 0;
+	var ruta = "php/mod_citas.php?";
+	if (clave=="") {
+		alert("No se ha podido realizar la consulta")
+	} else{
+		if(bb==0){
+			alert('Debe de seleccionar una opción');
+		}else{
+			if (bb=="SI"){
+				if(cc<=0 || cc ==""){
+					alert('Valor no valido');
+				}else{
+					s_to = dd - cc;
+					alert(s_to);
+					var datos = ruta+"clave="+clave+"&obs="+aa+"&asis="+bb+"&resto="+s_to+"&pago="+cc;
+					guardarDatos(datos);
+				}
+			}else{
+				if (bb=="NO"){
+					var datos = ruta+"clave="+clave+"&obs="+aa+"&asis="+bb+"&resto="+dd+"&pago="+0;
+					guardarDatos(datos);
+				}
+			}
+			
+		}	
+	}
+}
+
+function activa(){
+	var opc = document.getElementById('asisT').value;
+	var cc = document.getElementById('pago_s');
+	if (opc=="NO"){
+		cc.disabled=true;
+	} else if(opc=="SI"){
+		cc.disabled=false;
 	}
 }

@@ -25,7 +25,7 @@
 		$apellidoP = $row['apellido_p'];
 		$apellidoM = $row['apellido_m'];
 ?>
-	<a href="#"> 
+	<a href="#" onclick="mostrarInfo('<?php echo $clave ?>')"> 
 		<?php echo $nombre. " ". $apellidoP. " ". $apellidoM ?>
 	</a>
 <?php 		

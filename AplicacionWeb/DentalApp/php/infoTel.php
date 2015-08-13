@@ -22,9 +22,9 @@
 		*/
 		$telefono = $row['telefono'];
 ?>
-	<a href="#"> 
+	<label>
 		<?php echo $telefono?>
-	</a>
+	</label>
 <?php 		
 	}
 ?>

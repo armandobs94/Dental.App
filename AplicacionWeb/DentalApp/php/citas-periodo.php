@@ -14,7 +14,7 @@
 	$fecha = $_GET['fecha'];
 	$hora = $_GET['hora'];
 
-	$sql_cita = "INSERT INTO citas(clave_cliente, fecha, horario, tipoCita) VALUES ('$clave','$fecha','$hora',2)";
+	$sql_cita = "INSERT INTO citas(clave_cliente, fecha, horario,asistencia, tipoCita) VALUES ('$clave','$fecha','$hora','0','2')";
 	$result = mysqli_query($cont, $sql_cita);
 
 	if(!$result) {

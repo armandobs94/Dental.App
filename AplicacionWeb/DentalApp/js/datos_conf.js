@@ -143,8 +143,3 @@ xmlhttp.open('POST', 'php/lista_citas.php?fecha='+fecha);
   }
   xmlhttp.send(null);
 }
-
-
-
-
-
