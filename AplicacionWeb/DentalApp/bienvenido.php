@@ -1,9 +1,16 @@
 <?php 
 	session_start();
-	if (empty($_SESSION['user'])) {
+	if (empty($_SESSION['id_administrador'])) {
 		header('Location:index.php');
 	}else{
-		$_SESSION['user'];
+		$id = $_SESSION['id_administrador'];
+		
+	}
+	/*Aquiva la consulta para validar el Administrador*/
+	include("php/conexion.php");
+	$query = mysqli_query($cont,"SELECT * FROM administrador where id_administrador = '$id'");
+	while ($row = mysqli_fetch_array($query)) {
+		$t_a = $row['tipo'];
 	}
 ?>
 <!DOCTYPE html>
@@ -21,10 +28,15 @@
 	<script type="text/javascript" src="js/menuresponsive.js"></script>
 	<script type="text/javascript" src="js/calendario.js"></script>
 	<script type="text/javascript" src="js/inicio.js"></script>
+	<script type="text/javascript" src="js/v_administrador.js"></script>
+	<script type="text/javascript" src="js/buscador.js"></script>
+	<script type="text/javascript" src="js/env_valores.js"></script>
+	<script type="text/javascript" src="js/v_contraseña.js"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="css/calendario.css"/>
 
 </head>
 <body>
+<input type="text" id="t_a" value="<?php echo $t_a;?>" hidden>
 <input type="hidden" id="caja_datos" readonly>
 <input type="hidden" id="hora" readonly>
 <input type="hidden" id="campoFecha">
@@ -65,6 +77,20 @@
 			            <li><a href="#" id="g_t">Cliente</a></li>
 			          </ul>
 			        </li>
+			        			        <li class="dropdown" display="none" id="v_a">
+			          <a href="#" class="dropdown-toggle" >Administrador<b class="caret"></b></a>
+			          <ul class="dropdown-menu">
+			           <li class="dropdown">
+				          <a href="#" id="c_u" class="dropdown-toggle">Nuevo administrador <b class="caret"></b></a>
+				          <ul class="dropdown-menu">
+				            <li><a href="#" id="n_aS">Administrador del sistema</a></li>
+				            <li><a href="#" id="n_aB">Administrador basico</a></li>
+				          </ul>
+				        </li>
+				            <li><a href="#" id="e_ad">Eliminar administradores</a></li>
+			          </ul>
+			        </li>
+
 			     </ul>
 			     <ul class="nav navbar-nav navbar-right">
 			        <li><a href="php/logout.php">Salir</a></li>		        

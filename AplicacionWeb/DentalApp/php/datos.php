@@ -29,7 +29,7 @@
 		while ($row = mysqli_fetch_array($S)) {//se recorren todos los datos
 		
 		$horario = explode(":", $row['horario']);//separar la fecha
-
+		$fecha= $row['fecha'];
 		$hora = $horario[0];//separa el año.
 		$min = $horario[1];//separa el mes.
 		$user = $row['clave_cliente'];
@@ -38,6 +38,7 @@
 	* @brief Se crea una caja de datos en los que se envian las diferentes fechas encontradas
 	*/		
 		$ob[] = array(
+				"fecha" => $fecha,
 				"hora" => $hora,
 				"min" => $min,
 				"user" => $user

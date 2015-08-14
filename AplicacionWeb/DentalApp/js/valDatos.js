@@ -130,6 +130,9 @@ function verFecha(fecha){
 		dia = momentoActual.getDate();
 		mes = momentoActual.getMonth()+1;
 		anio = momentoActual.getFullYear();
+		if(mes<10){
+			mes = "0"+mes;
+		}
 		document.getElementById('campoFecha').value = anio+"-"+mes+"-"+dia;
 	}else{
 		document.getElementById('campoFecha').value = fecha;
@@ -155,12 +158,13 @@ function modDatos(clave){
 					alert('Valor no valido');
 				}else{
 					s_to = dd - cc;
-					alert(s_to);
+					//alert(s_to);
 					var datos = ruta+"clave="+clave+"&obs="+aa+"&asis="+bb+"&resto="+s_to+"&pago="+cc;
 					guardarDatos(datos);
 				}
 			}else{
 				if (bb=="NO"){
+					cc.value = dd;
 					var datos = ruta+"clave="+clave+"&obs="+aa+"&asis="+bb+"&resto="+dd+"&pago="+0;
 					guardarDatos(datos);
 				}
@@ -179,3 +183,53 @@ function activa(){
 		cc.disabled=false;
 	}
 }
+
+//modificar datos de una cita
+function modiCita(clave,hora){
+	if(!confirm('¿Quiere modificar esta cita?')){
+
+	}else{
+		var f = document.getElementById('campoFecha').value;
+		//alert(clave+ " "+f)
+		var ruta = "forms/modificar-cita.php?";
+		var datos = ruta+"clave="+clave+"&fecha="+f+"&hora="+hora;
+		guardarDatos(datos);
+	}
+}
+
+//eliminar cita
+function delCita(clave, fecha, hora){
+	if(!confirm('¿Desea cancelar esta cita?')){
+
+	}else{
+		var ruta = "php/cita-cancel.php?";
+		var datos = ruta+"clave="+clave+"&fecha="+fecha+"&hora="+hora;
+		guardarDatos(datos);
+	}
+}
+
+//modificando cita
+function modificarCita(clave){
+	var name = document.getElementById('nom_t').value;
+	var fA= document.getElementById('campoFecha').value;
+	var fecha_t = document.getElementById('fecha_t').value;
+	var h = document.getElementById('hora_t').value;
+	var m = document.getElementById('min_t').value;
+	var f2 = document.getElementById('fe_t').value;
+	var h2 = document.getElementById('ho_t').value;
+	var hora = h+":"+m; 
+	if(fecha_t==""){
+		alert('Debe de seleccionar una fecha');
+	}else if(h=="N" || m=="N"){
+		alert('seleccionar horario')
+	}else if(fecha_t <= fA ){
+		alert('La fecha seleccionada no es correcta');
+	}else{
+		//alert(fecha_t+"  "+hora+" "+name+" "+clave+" - "+fA)
+		var ruta = 'php/cita_mod.php?';
+		var datos = ruta+'clave='+clave+"&nombre="+name+"&fecha="+fecha_t+"&hora="+hora+"&f2="+f2+"&h2="+h2;
+		guardarDatos(datos);
+	}
+}
+
+

@@ -17,7 +17,7 @@ class resivir_post {
 		if(mysqli_num_rows($query) == 1){
 			$row = mysqli_fetch_array($query);
 				session_start();
-				$_SESSION['user'] = $row['user'];
+				$_SESSION['id_administrador'] = $row['id_administrador'];
 				header('Location: ../bienvenido.php');
 				exit;
 		}else{
