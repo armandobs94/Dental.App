@@ -232,4 +232,29 @@ function modificarCita(clave){
 	}
 }
 
+function agregarCita(clave,nomb){
+	//alert(clave+ " "+nomb);
+	var ruta = "forms/cita-cliente.php?";
+	var datos = ruta+"clave="+clave+"&nombre="+nomb;
+	guardarDatos(datos);
+}
+
+function newCita(clave){
+	var fecha = document.getElementById('fecha_i').value;
+	var hh = document.getElementById('hora_t').value;
+	var mm = document.getElementById('min_t').value;
+
+	hora = hh+":"+mm;
+	if(fecha==''){
+		alert('Seleccionar fecha');
+	} else if(hh=='N' || mm == 'N'){
+		alert('Seleccionar horario');
+	}else{
+		var ruta = "php/n-cita.php?";
+		var datos = ruta+"clave="+clave+"&fecha="+fecha+"&hora="+hora;
+		guardarDatos(datos);
+	}	
+}
+
+
 

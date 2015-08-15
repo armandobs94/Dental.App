@@ -8,8 +8,6 @@
 	$hora = $_GET['hora'];
 	$nHora = $_GET['h2'];
 
-	echo $clave . $nombre . $fecha . $hora ;
-
 	$sql = "SELECT * FROM citas WHERE fecha='$fecha' AND horario ='$hora' AND asistencia = '0'";
 	$q = mysqli_query($cont, $sql);
 	$tt = mysqli_num_rows($q);

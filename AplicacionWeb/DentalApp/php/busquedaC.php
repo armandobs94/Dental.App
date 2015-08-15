@@ -1,3 +1,8 @@
+<table border="1">
+	<tr>
+		<th>NOMBRE COMPLETO</th>
+		<th>TELEFONO</th>
+	</tr>
 <?php 
 	/**
 	*@file busqueda.php
@@ -17,7 +22,7 @@
 	if (mysqli_num_rows($query) == 0){
 		echo "No se encontro un registro :c";
 	}else{
-		echo "Se encontro un registro :D!";
+		//echo "Se encontro un registro :D!";
 	}
 	
 	while($row = mysqli_fetch_array($query)) {
@@ -26,8 +31,19 @@
 		$apellido_p = $row['apellido_p'];
 		$apellido_m = $row['apellido_m'];
 		$telefono = $row['telefono'];
-	echo"
-		<p>$clave_cliente $nombre $apellido_p $apellido_m $telefono</p>
-		";
-}
+
+		$n_completo = $nombre. " ". $apellido_p. " ". $apellido_m;
 ?>
+	<tr>
+		<td>
+			<a href="#" onclick="agregarCita('<?php echo $clave_cliente ?>','<?php echo $n_completo ?>')">
+				<?php  echo $n_completo?>
+			</a>
+		</td>
+		<td> <label><?php echo $telefono ?></label> </td>
+	</tr>
+	
+<?php 
+	}
+?>
+</table>
