@@ -140,7 +140,8 @@ function verFecha(fecha){
 }
 
 //Modificar estado de cita de acuerdo al cliente
-function modDatos(clave){
+function modDatos(clave,fecha, hora){
+	//alert(fecha+" "+hora);
 	var aa = document.getElementById('obs_f').value;
 	var bb = document.getElementById('asisT').value;
 	var cc = document.getElementById('pago_s').value;
@@ -159,13 +160,13 @@ function modDatos(clave){
 				}else{
 					s_to = dd - cc;
 					//alert(s_to);
-					var datos = ruta+"clave="+clave+"&obs="+aa+"&asis="+bb+"&resto="+s_to+"&pago="+cc;
+					var datos = ruta+"clave="+clave+"&obs="+aa+"&asis="+bb+"&resto="+s_to+"&pago="+cc+"&fecha="+fecha+"&hora="+hora;
 					guardarDatos(datos);
 				}
 			}else{
 				if (bb=="NO"){
 					cc.value = dd;
-					var datos = ruta+"clave="+clave+"&obs="+aa+"&asis="+bb+"&resto="+dd+"&pago="+0;
+					var datos = ruta+"clave="+clave+"&obs="+aa+"&asis="+bb+"&resto="+dd+"&pago="+"0"+"&fecha="+fecha+"&hora="+hora;
 					guardarDatos(datos);
 				}
 			}

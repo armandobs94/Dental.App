@@ -6,7 +6,6 @@
 	* @version 1.0
 	* @brief Archivo encargado de buscar un cliente en espcifico para asignarle su cita.
 	*/
-
 	/**
 	* @brief Recivir variable
 	*/
@@ -14,7 +13,9 @@
 	/**
 	* @brief se ejecuta la consulta sql
 	*/
-	$SQL = "SELECT A.clave_cliente, A.nombre, A.apellido_p, A.apellido_m, B.telefono FROM clientes A, informacion_cliente B WHERE B.telefono LIKE ('%$busca%') AND A.clave_cliente = B.clave_cliente AND A.tipoCliente = 2 LIMIT 0,1";
+	$SQL = "SELECT A.clave_cliente, A.nombre, A.apellido_p, A.apellido_m, B.telefono 
+			FROM clientes A, informacion_cliente B WHERE B.telefono LIKE ('%$busca%') 
+			AND A.clave_cliente = B.clave_cliente AND A.tipoCliente = 2 LIMIT 0,1";
 	$result = mysqli_query($cont, $SQL);
 	/**
 	* @brief Se muestran los datos del cliente

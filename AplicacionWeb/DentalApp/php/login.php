@@ -11,7 +11,7 @@ class resivir_post {
     }
 // Funcion del login 
     function login() {
-
+    	
 		include("conexion.php");
 		$query = mysqli_query($cont,"SELECT * FROM administrador WHERE user = '$this->user' AND password = '$this->password'");
 		if(mysqli_num_rows($query) == 1){

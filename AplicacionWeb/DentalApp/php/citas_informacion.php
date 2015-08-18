@@ -74,5 +74,5 @@
 	}//termina while
 ?>	
 </div>
-<button onclick="modDatos('<?php echo $clave; ?>')"> Guardar</button>
+<button onclick="modDatos('<?php echo $clave; ?>','<?php echo $f_fecha ?>','<?php echo $f_hora ?>')"> Guardar</button>
 

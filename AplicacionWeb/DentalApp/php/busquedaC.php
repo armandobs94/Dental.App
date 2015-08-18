@@ -11,16 +11,16 @@
 	*@version 3.0 
 	*/
 	$item = $_GET['item'];
-	echo $item;
+	//echo $item;
 	include("conexion.php");
 	echo "<br>";
-	$query = mysqli_query($cont,"	SELECT A.clave_cliente, A.nombre, A.apellido_p, A.apellido_m, B.telefono
+	$query = mysqli_query($cont,"	SELECT A.clave_cliente, A.nombre, A.apellido_p, A.apellido_m, B.telefono,A.tipoCliente
 									FROM clientes A
 									INNER JOIN informacion_cliente B ON A.clave_cliente = B.clave_cliente
-									WHERE A.clave_cliente LIKE '%$item%' OR A.nombre LIKE '%$item%' OR A.apellido_p LIKE '%$item%' OR A.apellido_m LIKE '%$item%'");
+									WHERE A.tipoCliente = '2' AND A.clave_cliente LIKE '%$item%' OR A.nombre LIKE '%$item%' OR A.apellido_p LIKE '%$item%' OR A.apellido_m LIKE '%$item%'");
 
 	if (mysqli_num_rows($query) == 0){
-		echo "No se encontro un registro :c";
+		//echo "No se encontro un registro :c";
 	}else{
 		//echo "Se encontro un registro :D!";
 	}
@@ -31,8 +31,11 @@
 		$apellido_p = $row['apellido_p'];
 		$apellido_m = $row['apellido_m'];
 		$telefono = $row['telefono'];
+		$tipo = $row['tipoCliente'];
 
 		$n_completo = $nombre. " ". $apellido_p. " ". $apellido_m;
+
+		if ($tipo == 2) {
 ?>
 	<tr>
 		<td>
@@ -42,8 +45,10 @@
 		</td>
 		<td> <label><?php echo $telefono ?></label> </td>
 	</tr>
-	
 <?php 
+		}else{
+
+		}
 	}
 ?>
 </table>
